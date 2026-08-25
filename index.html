@@ -949,7 +949,7 @@ Take 60 seconds to tell us about your project and see how Team Medico can help..
         first_name: a.first_name || '',
         last_name:  a.last_name || '',
         email:      a.email || '',
-        phone:      a.phone || ''
+        phone: a.phone ? '+1' + normalizePhoneDigits(a.phone) :  ''
       },
       project: {
         sector: a.project_sector || null,
